@@ -25,7 +25,7 @@ async def on_message(message):
         if os.path.exists('spotify.txt'):
            lines = open('spotify.txt', encoding='utf-8').read().splitlines()
            text = random.choice(lines)
-           await message.author.send("Spotify Account - ", text)
+           await message.author.send(text)
         else:
             await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
 #           
@@ -33,7 +33,7 @@ async def on_message(message):
         if os.path.exists('hulu.txt'):
            lines = open('hulu.txt', encoding='utf-8').read().splitlines()
            text = random.choice(lines)
-           await message.author.send("Hulu Account - ", text)
+           await message.author.send(text)
         else:
             await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
 #            
@@ -41,7 +41,7 @@ async def on_message(message):
         if os.path.exists('crunchyroll.txt'):
            lines = open('crunchyroll.txt', encoding='utf-8').read().splitlines()
            text = random.choice(lines)
-           await message.author.send("Crunchyroll Account - ", text)
+           await message.author.send(text)
         else:
             await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
 #
@@ -49,7 +49,7 @@ async def on_message(message):
         if os.path.exists('nordvpn.txt'):
            lines = open('nordvpn.txt', encoding='utf-8').read().splitlines()
            text = random.choice(lines)
-           await message.author.send("NordVPN Account - ", text)
+           await message.author.send(text)
         else:
            await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
 #           
