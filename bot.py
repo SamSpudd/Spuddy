@@ -19,7 +19,15 @@ async def on_message(message):
     if message.content == "Hello":
          await message.channel.send('Hi!')
     if message.content == "-help":
-         await message.channel.send('Commands: -gen spotify, -gen hulu, -gen crunchyroll, -gen nordvpn, -gen wakanim, -gen nitro, gen disney+')
+         embed = discord.Embed(title="Commands", description="Here are the commands that work with the bot!", color=0x00ff00)
+         embed.add_field(name="Generate Spotify", value="-gen spotify", inline=True)
+         embed.add_field(name="Generate Hulu", value="-gen hulu", inline=True)
+         embed.add_field(name="Generate Crunchyroll", value="-gen crunchyroll", inline=True)   
+         embed.add_field(name="Generate NordVPN", value="-gen nordvpn", inline=True)
+         embed.add_field(name="Generate Wakanim", value="-gen wakanim", inline=True)
+         embed.add_field(name="Generate Nitro", value="-gen nitro", inline=True)
+         embed.add_field(name="Generate DisneyPlus", value="-gen disney", inline=True)   
+         await message.channel.send(embed=embed)
 #if "Paid Spotify Premium" in [role.name for role in message.author.roles]:
     if message.content == "-gen spotify":
         if os.path.exists('spotify.txt'):
