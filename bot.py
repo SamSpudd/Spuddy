@@ -13,6 +13,7 @@ async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
 @client.event
+@commands.cooldown(1, 7200, commands.BucketType.user)
 async def on_message(message):
     if message.author == client.user:
         return
