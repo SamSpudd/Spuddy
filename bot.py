@@ -53,7 +53,7 @@ async def on_message(message):
         else:
            await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
 #      
-if message.content == "-gen wakanim":
+    if message.content == "-gen wakanim":
         if os.path.exists('wakanim.txt'):
            lines = open('wakanim.txt', encoding='utf-8').read().splitlines()
            text = random.choice(lines)
