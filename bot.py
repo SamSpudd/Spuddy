@@ -60,5 +60,21 @@ async def on_message(message):
            await message.author.send(text)
         else:
            await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
-#           
+#      
+    if message.content == "-gen nitro":
+        if os.path.exists('nitro.txt'):
+           lines = open('nitro.txt', encoding='utf-8').read().splitlines()
+           text = random.choice(lines)
+           await message.author.send(text)
+        else:
+           await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
+#  
+    if message.content == "-gen disney+":
+        if os.path.exists('disney.txt'):
+           lines = open('disney.txt', encoding='utf-8').read().splitlines()
+           text = random.choice(lines)
+           await message.author.send(text)
+        else:
+           await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
+# 
 client.run(token)
