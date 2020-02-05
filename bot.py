@@ -34,7 +34,7 @@ async def on_message(message):
            lines = open('spotify.txt', encoding='utf-8').read().splitlines()
            text = random.choice(lines)
            embed = discord.Embed(title="Here is your Spotify Account!", color=0x00ff00)
-           embed.add_field(value=(text), inline=True)
+           embed.add_field(value=text, inline=True)
            await message.author.send(embed=embed)
         else:
             await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
