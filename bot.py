@@ -12,6 +12,9 @@ client = discord.Client()
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
+    
+discord.ext.commands.cooldown(rate, per, type=<BucketType.default: 3600>)
+
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -85,6 +88,5 @@ async def on_message(message):
         else:
            await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
 # 
-@commands.cooldown(1, 30, commands.BucketType.user)
 
 client.run(token)
