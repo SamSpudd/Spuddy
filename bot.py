@@ -85,5 +85,6 @@ async def on_message(message):
         else:
            await message.channel.send("File Error. This shouldn't happen @SamSpudd#8226!")
 # 
+@commands.cooldown(1, 30, commands.BucketType.user)
 
 client.run(token)
