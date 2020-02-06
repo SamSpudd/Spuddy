@@ -14,7 +14,7 @@ async def on_ready():
 
 
 @client.event
-@commands.cooldown(1, 10, BucketType.user)
+#@commands.cooldown(1, 10, BucketType.user)
 async def on_message(message):
     if message.author == client.user:
         return
